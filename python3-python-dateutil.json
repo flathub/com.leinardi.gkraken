@@ -2,7 +2,7 @@
   "name": "python3-python-dateutil",
   "buildsystem": "simple",
   "build-commands": [
-    "python3 setup.py install --prefix=/app --root=/"
+    "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/"
   ],
   "sources": [
     {
