@@ -4,16 +4,53 @@
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-injector",
+            "name": "python3-Cython",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} injector==0.17.0"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} Cython==0.29.15"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2a/d1/0dfdf9cbc160883d408d1f610ac75e0b10f0af5da74e4f9d5d9d4b2c38f7/injector-0.17.0.tar.gz",
-                    "sha256": "882e91f8b4d693cfe29aa4eead3055480d7e2a6fb80a6a2c3b795650db720702"
+                    "url": "https://files.pythonhosted.org/packages/d9/82/d01e767abb9c4a5c07a6a1e6f4d5a8dfce7369318d31f48a52374094372e/Cython-0.29.15.tar.gz",
+                    "sha256": "60d859e1efa5cc80436d58aecd3718ff2e74b987db0518376046adedba97ac30"
+                }
+            ]
+        },
+        {
+            "name": "python3-injector",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} injector==0.18.3"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/03/92/705fe8aca27678e01bbdd7738173b8e7df0088a2202c80352f664630d638/typing_extensions-3.7.4.1-py3-none-any.whl",
+                    "sha256": "cf8b63fedea4d89bab840ecbb93e75578af28f76f66c35889bd7065f5af88575"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/80/5f/c6ff0fb5ac88cb1776c95321fddf79e1766c595ae2b9e8ff75625b81762d/injector-0.18.3-py2.py3-none-any.whl",
+                    "sha256": "04c15a965504c4628873a56886950bd254102552a1d41ee983bfb1a7f7c7e7d6"
+                }
+            ]
+        },
+        {
+            "name": "python3-hidapi",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix=${FLATPAK_DEST}"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/7c/a0/d5ca6f191c8860a4769ba19448d2b2d6b3e2ca2c30aa61bb96a3f6bd25ba/hidapi-0.9.0.post2.tar.gz",
+                    "sha256": "a71dd3c153cb6bb2b73d2612b5ab262830d78c6428f33f0c06818749e64c9320"
+                },
+                {
+                    "type": "patch",
+                    "path": "hidapi_fix_prefix.patch"
                 }
             ]
         },
@@ -21,23 +58,23 @@
             "name": "python3-liquidctl",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} liquidctl==1.1.0"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} liquidctl==1.3.3"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/84/cc/9194df1a799f89bb46eb2b93cd6014cd78c5a43de3fa3d5cd66a4ae2a401/liquidctl-1.1.0.tar.gz",
-                    "sha256": "0202325f6cf6a937f3c78d492d5ba2dfef3ae7911f62d68b1ccd05df74e7078a"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/34/2095e821c01225377dda4ebdbd53d8316d6abb243c9bee43d3888fa91dd6/pyusb-1.0.2.tar.gz",
-                    "sha256": "4e9b72cc4a4205ca64fbf1f3fff39a335512166c151ad103e55c8223ac147362"
+                    "url": "https://files.pythonhosted.org/packages/f6/e4/ba85351cde1be689bd7250f96fd4e48a78988f723843fbbe5b67596edfa2/liquidctl-1.3.3.tar.gz",
+                    "sha256": "d13180867e07420c5890fe1110e8f45fe343794549a9ed7d5e8e76663bc10c24"
                 },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz",
                     "sha256": "49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5f/34/2095e821c01225377dda4ebdbd53d8316d6abb243c9bee43d3888fa91dd6/pyusb-1.0.2.tar.gz",
+                    "sha256": "4e9b72cc4a4205ca64fbf1f3fff39a335512166c151ad103e55c8223ac147362"
                 }
             ]
         },
@@ -45,14 +82,14 @@
             "name": "python3-matplotlib",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} numpy",
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib==3.1.1"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} numpy==1.17.5",
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib==3.1.3"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/12/d1/7b12cd79c791348cb0c78ce6e7d16bd72992f13c9f1e8e43d2725a6d8adf/matplotlib-3.1.1.tar.gz",
-                    "sha256": "1febd22afe1489b13c6749ea059d392c03261b2950d1d45c17e3aed812080c93"
+                    "url": "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz",
+                    "sha256": "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
                 },
                 {
                     "type": "file",
@@ -61,8 +98,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/91/53/f4dedc34f7a5797c35e451d67740560a384168f79c32e127b22a91f96ceb/pyparsing-2.4.1.tar.gz",
-                    "sha256": "530d8bf8cc93a34019d08142593cf4d78a05c890da8cf87ffa3120af53772238"
+                    "url": "https://files.pythonhosted.org/packages/a2/56/0404c03c83cfcca229071d3c921d7d79ed385060bbe969fde3fd8f774ebd/pyparsing-2.4.6.tar.gz",
+                    "sha256": "4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f"
                 },
                 {
                     "type": "file",
@@ -71,18 +108,38 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
-                    "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+                    "url": "https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl",
+                    "sha256": "75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ad/99/5b2e99737edeb28c71bcbec5b5dda19d0d9ef3ca3e92e3e925e7c0bb364c/python-dateutil-2.8.0.tar.gz",
-                    "sha256": "c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"
+                    "url": "https://files.pythonhosted.org/packages/be/74/24d058c17b155d131359f1cd01e120b3954686bf8b7853172b279237e1dc/matplotlib-3.1.3.tar.gz",
+                    "sha256": "db3121f12fb9b99f105d1413aebaeb3d943f269f3d262b45586d12765866f0c6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d3/4b/f9f4b96c0b1ba43d28a5bdc4b64f0b9d3fbcf31313a51bc766942866a7c7/numpy-1.16.4.zip",
-                    "sha256": "7242be12a58fec245ee9734e625964b97cf7e3f2f7d016603f9e56660ce479c7"
+                    "url": "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz",
+                    "sha256": "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl",
+                    "sha256": "c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d9/09/8e89c05abc450ea347f40b4fa917ec5c69b5228da344487f178586a3187c/numpy-1.17.5.zip",
+                    "sha256": "16507ba6617f62ae3c6ab1725ae6f550331025d4d9a369b83f6d5a470446c342"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl",
+                    "sha256": "1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl",
+                    "sha256": "8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"
                 }
             ]
         },
@@ -90,13 +147,13 @@
             "name": "python3-peewee",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} peewee==3.9.6"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} peewee==3.13.1"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/66/5902f91abec78be8ef41eff4e547fe595c9e7b6c20f4be3d8cfb8e079061/peewee-3.9.6.tar.gz",
-                    "sha256": "bc879e1ffb7f7684f90d9dd236c77b5042118d079f94764f35e3806948829ac8"
+                    "url": "https://files.pythonhosted.org/packages/d4/30/0083f0e484902d118927236497c5f55c14a46c2a0e1b95083d26e5608371/peewee-3.13.1.tar.gz",
+                    "sha256": "9492af4d1f8e18a7fa0e930960315b38931286ea0f1659bbd5503456cffdacde"
                 }
             ]
         },
@@ -109,13 +166,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/40/ee/8daf797cda4ffe7724b9d47cbb5e2b44ca6235764622d163c586bd9bd7c5/PyGObject-3.32.2.tar.gz",
-                    "sha256": "fa82746df059b9e0dcf473e0a9ff0693aa5e064f1ca1e2c46b5ac815bceda1ad"
+                    "url": "https://files.pythonhosted.org/packages/46/8a/b183f3edc812d4d28c8b671a922b5bc2863be5d38c56b3ad9155815e78dd/PyGObject-3.34.0.tar.gz",
+                    "sha256": "2acb0daf2b3a23a90f52066cc23d1053339fee2f5f7f4275f8baa3704ae0c543"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/48/20/5e83af98eb897935bf7dc39455e892ba866feebb9b7c3b392982866f9958/pycairo-1.18.1.tar.gz",
-                    "sha256": "70172e58b6bad7572a3518c26729b074acdde15e6fee6cbab6d3528ad552b786"
+                    "url": "https://files.pythonhosted.org/packages/e8/9d/c8be300fc6b1298559d37a071c3833b0b251e0fff334d2e4c408d5789162/pycairo-1.19.1.tar.gz",
+                    "sha256": "2c143183280feb67f5beb4e543fd49990c28e7df427301ede04fc550d3562e84"
                 }
             ]
         },
@@ -128,8 +185,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/47/6e/311d5f22e2b76381719b5d0c6e9dc39cd33999adae67db71d7279a6d70f4/pyxdg-0.26.tar.gz",
-                    "sha256": "fe2928d3f532ed32b39c32a482b54136fe766d19936afc96c8f00645f9da1a06"
+                    "url": "https://files.pythonhosted.org/packages/39/03/12eb9062f43adb94e30f366743cb5c83fd15fef026500cd4de42c7c12280/pyxdg-0.26-py2.py3-none-any.whl",
+                    "sha256": "1948ff8e2db02156c0cccd2529b43c0cff56ebaa71f5f021bbd755bc1419190e"
                 }
             ]
         },
@@ -137,33 +194,33 @@
             "name": "python3-requests",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests==2.23.0"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz",
-                    "sha256": "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
+                    "url": "https://files.pythonhosted.org/packages/89/e3/afebe61c546d18fb1709a61bee788254b40e736cff7271c7de5de2dc4128/idna-2.9-py2.py3-none-any.whl",
+                    "sha256": "a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz",
-                    "sha256": "11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4"
+                    "url": "https://files.pythonhosted.org/packages/1a/70/1935c770cb3be6e3a8b78ced23d7e0f3b187f5cbfab4749523ed65d7c9b1/requests-2.23.0-py2.py3-none-any.whl",
+                    "sha256": "43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz",
-                    "sha256": "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+                    "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
+                    "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c5/67/5d0548226bcc34468e23a0333978f0e23d28d0b3f0c71a151aef9c3f7680/certifi-2019.6.16.tar.gz",
-                    "sha256": "945e3ba63a0b9f577b1395204e13c3a231f9bc0223888be653286534e5873695"
+                    "url": "https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl",
+                    "sha256": "017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4c/13/2386233f7ee40aa8444b47f7463338f3cbdf00c316627558784e3f542f07/urllib3-1.25.3.tar.gz",
-                    "sha256": "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"
+                    "url": "https://files.pythonhosted.org/packages/e8/74/6e4f91745020f967d09332bb2b8b9b10090957334692eb88ea4afe91b77f/urllib3-1.25.8-py2.py3-none-any.whl",
+                    "sha256": "2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc"
                 }
             ]
         },
@@ -171,19 +228,13 @@
             "name": "python3-Rx",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 setup.py install --prefix=/app --root=/"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} Rx==3.0.1"
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/9b/27/87ab7fc16a00141e0570ef8fc38c84f09e0840c9ce38ea7f1a79a9b32bcb/Rx-3.0.1.tar.gz",
-                    "sha256": "c7d168618e3cec35fda9c9c8b5d7f966739df4b1a99b315eae1fc2d7d69e2512"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                    "sed -i \"/pytest\\-runner/d\" setup.py"
-                    ]
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5b/ad/d93165ba4d6e02f6f6c7e84262444b62b646d5dd7d3a27f16530a2b1a8e5/Rx-3.0.1-py3-none-any.whl",
+                    "sha256": "00c4ab3ecd1ab9a55f310d05e20ae7f93d3cdd1150de5c56347e67a1ecd73963"
                 }
             ]
         }
