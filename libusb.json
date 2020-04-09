@@ -11,9 +11,10 @@
   ],
   "sources": [
     {
-      "type": "archive",
-      "url": "https://github.com/libusb/libusb/archive/v1.0.22.tar.gz",
-      "sha256": "3500f7b182750cd9ccf9be8b1df998f83df56a39ab264976bdb3307773e16f48"
+      "type": "git",
+      "url": "https://github.com/libusb/libusb.git",
+      "tag": "v1.0.23",
+      "commit": "e782eeb2514266f6738e242cdcb18e3ae1ed06fa"
     }
   ],
   "post-install": [

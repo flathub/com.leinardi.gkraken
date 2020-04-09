@@ -2,11 +2,12 @@
   "app-id": "com.leinardi.gkraken",
   "command": "gkraken",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.34",
+  "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--share=ipc",
-    "--socket=x11",
+    "--socket=fallback-x11",
+    "--socket=wayland",
     "--device=all",
     "--share=network",
     "--talk-name=org.kde.StatusNotifierWatcher",
@@ -35,8 +36,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gkraken.git",
-          "tag": "0.14.0",
-          "commit": "8ececf1e74e93f1f2258f14bd337d189c9b7f2c9"
+          "tag": "0.14.1",
+          "commit": "edcab39e10e6756a36380097d69973d2b13e6e2b"
         }
       ]
     }

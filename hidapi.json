@@ -14,9 +14,10 @@
   ],
   "sources": [
     {
-      "type": "archive",
-      "url": "https://github.com/libusb/hidapi/archive/hidapi-0.9.0.tar.gz",
-      "sha256": "630ee1834bdd5c5761ab079fd04f463a89585df8fcae51a7bfe4229b1e02a652"
+      "type": "git",
+      "url": "https://github.com/libusb/hidapi.git",
+      "tag": "hidapi-0.9.0",
+      "commit": "7da5cc91fc0d2dbe4df4f08cd31f6ca1a262418f"
     }
   ],
   "post-install": [
