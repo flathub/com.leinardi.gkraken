@@ -161,13 +161,13 @@
             "name": "python3-PyGObject",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyGObject==3.36.0"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyGObject==3.36.1"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3e/b5/f4fd3351ed074aeeae30bff71428f38bc42187e34c44913239a9dc85a7fc/PyGObject-3.36.0.tar.gz",
-                    "sha256": "b97f570e55017fcd3732164811f24ecf63983a4834f61b55b0aaf64ecefac856"
+                    "url": "https://files.pythonhosted.org/packages/93/41/bf9ab8929f51dac2979ae81bb094728bacee3ceb049def72d3fc1bcb4241/PyGObject-3.36.1.tar.gz",
+                    "sha256": "012a589aec687bfa809a1ff9f5cd775dc7f6fcec1a6bc7fe88e1002a68f8ba34"
                 },
                 {
                     "type": "file",
