@@ -2,7 +2,7 @@
   "app-id": "com.leinardi.gkraken",
   "command": "gkraken",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.36",
+  "runtime-version": "3.38",
   "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--share=ipc",
@@ -36,8 +36,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gkraken.git",
-          "tag": "0.14.4",
-          "commit": "5d3855173c5f4ef068190d6a55cffd958faf7063"
+          "tag": "0.14.5",
+          "commit": "4324bf214d401a842e61bdd7d08552a100072f81"
         }
       ]
     }
