@@ -2,7 +2,7 @@
   "app-id": "com.leinardi.gkraken",
   "command": "gkraken",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.36",
+  "runtime-version": "3.38",
   "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--share=ipc",
