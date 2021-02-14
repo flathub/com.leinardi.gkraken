@@ -36,8 +36,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gkraken.git",
-          "tag": "0.14.5",
-          "commit": "4324bf214d401a842e61bdd7d08552a100072f81"
+          "tag": "1.0.0",
+          "commit": "ceba336c50b0264ac371589ad329f26d79aa78a3"
         }
       ]
     }
