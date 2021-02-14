@@ -44,13 +44,28 @@
             "name": "python3-liquidctl",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} liquidctl==1.3.3"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"liquidctl==1.5.0\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f6/e4/ba85351cde1be689bd7250f96fd4e48a78988f723843fbbe5b67596edfa2/liquidctl-1.3.3.tar.gz",
-                    "sha256": "d13180867e07420c5890fe1110e8f45fe343794549a9ed7d5e8e76663bc10c24"
+                    "url": "https://files.pythonhosted.org/packages/15/0e/255e3d57965f318973e417d5b7034223f1223de500d91b945ddfaef42a37/setuptools-53.0.0-py3-none-any.whl",
+                    "sha256": "0e86620d658c5ca87a71a283bd308fcaeb4c33e17792ef6f081aec17c171347f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/4d/5c/70e14aa4f0c586efc017e1d1aa6e2f7921eefc7602fc2d03368ff912aa91/smbus-1.1.post2.tar.gz",
+                    "sha256": "f96d345e0aa10053a8a4917634f1dc37ba1f656fa5cace7629b71777e90855c6"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b5/28/b857ac783257f142932b23379d761a3d9becf6deecf5d14075ec19bdb890/pyusb-1.1.1-py3-none-any.whl",
+                    "sha256": "f18eb813d3a1439918071234589162c2f209a19adbeffeb1377ce078a4aebc70"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/99/9b/5c41756461308a5b2d8dcbcd6eaa2f1c1bc60f0a6aa743b58cab756a92e1/hidapi-0.10.1.tar.gz",
+                    "sha256": "a1170b18050bc57fae3840a51084e8252fd319c0fc6043d68c8501deb0e25846"
                 },
                 {
                     "type": "file",
@@ -59,8 +74,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/34/2095e821c01225377dda4ebdbd53d8316d6abb243c9bee43d3888fa91dd6/pyusb-1.0.2.tar.gz",
-                    "sha256": "4e9b72cc4a4205ca64fbf1f3fff39a335512166c151ad103e55c8223ac147362"
+                    "url": "https://files.pythonhosted.org/packages/ea/b9/10ab636257e1dcaca0e268e8c44725fe107b1556d5343fba5a51cdc59f5d/liquidctl-1.5.0.tar.gz",
+                    "sha256": "762561a8b491aa98f0ccbbab4f9770813a82cc7fd776fa4c21873b994d63e892"
                 }
             ]
         },
@@ -133,13 +148,13 @@
             "name": "python3-peewee",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"peewee==3.13.3\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"peewee==3.14.1\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e1/3e/a21e7268fa39756cdbd6d86af78ff1c0a92b84d6dbfadff431e9e3b9e1d3/peewee-3.13.3.tar.gz",
-                    "sha256": "1269a9736865512bd4056298003aab190957afe07d2616cf22eaf56cb6398369"
+                    "url": "https://files.pythonhosted.org/packages/c2/12/032c4d74cd3c52a70797ab2bb9e4392a05e250b8f9e051cae7db12ae649c/peewee-3.14.1.tar.gz",
+                    "sha256": "4a795dd30fc0e68f8da66bf03ec54e669a24ab7ce35c2c12a2e77fea7bcc21ce"
                 }
             ]
         },
@@ -180,23 +195,13 @@
             "name": "python3-requests",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests==2.25.0\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests==2.25.1\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl",
-                    "sha256": "719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f5/71/45d36a8df68f3ebb098d6861b2c017f3d094538c0fb98fa61d4dc43e69b9/urllib3-1.26.2-py2.py3-none-any.whl",
-                    "sha256": "d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
-                    "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
+                    "url": "https://files.pythonhosted.org/packages/23/fc/8a49991f7905261f9ca9df5aa9b58363c3c821ce3e7f671895442b7100f2/urllib3-1.26.3-py2.py3-none-any.whl",
+                    "sha256": "1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80"
                 },
                 {
                     "type": "file",
@@ -205,8 +210,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/39/fc/f91eac5a39a65f75a7adb58eac7fa78871ea9872283fb9c44e6545998134/requests-2.25.0-py2.py3-none-any.whl",
-                    "sha256": "e786fa28d8c9154e6a4de5d46a1d921b8749f8b74e28bde23768e5e16eece998"
+                    "url": "https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl",
+                    "sha256": "f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl",
+                    "sha256": "719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl",
+                    "sha256": "c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"
                 }
             ]
         },
