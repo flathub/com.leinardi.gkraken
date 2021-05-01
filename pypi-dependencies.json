@@ -44,7 +44,7 @@
             "name": "python3-liquidctl",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"liquidctl==1.6.0\" --no-build-isolation"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"liquidctl==1.6.1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -59,13 +59,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/99/9b/5c41756461308a5b2d8dcbcd6eaa2f1c1bc60f0a6aa743b58cab756a92e1/hidapi-0.10.1.tar.gz",
-                    "sha256": "a1170b18050bc57fae3840a51084e8252fd319c0fc6043d68c8501deb0e25846"
+                    "url": "https://files.pythonhosted.org/packages/8b/aa/fe1e38a2092a674e80def5dcde1d54ae41da7b9424d143f35b1179e9faa1/liquidctl-1.6.1.tar.gz",
+                    "sha256": "e3b6aa5ae55204f8d9a8813105269df7dc8f80087670e3eac88b722949b3843f"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f1/47/fcdf947dc9edfce97bf2d91cbbe2b6b1cd979d8dbbae76e4d1b7a59a0793/liquidctl-1.6.0.tar.gz",
-                    "sha256": "486dc366f10810a4efb301f3ceda10657a09937e9bc936cecec792ac26c2f186"
+                    "url": "https://files.pythonhosted.org/packages/99/9b/5c41756461308a5b2d8dcbcd6eaa2f1c1bc60f0a6aa743b58cab756a92e1/hidapi-0.10.1.tar.gz",
+                    "sha256": "a1170b18050bc57fae3840a51084e8252fd319c0fc6043d68c8501deb0e25846"
                 },
                 {
                     "type": "file",
