@@ -7,7 +7,7 @@
             "name": "python3-injector",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"injector==0.18.4\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"injector==0.19.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -17,8 +17,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/29/36/eaf271dd4c5325710f306245e257d969a8c4d1e79ea0d08cfeaad8cdd8f4/injector-0.18.4-py2.py3-none-any.whl",
-                    "sha256": "9e6e7e63050630b2fc3fe1472bdc7ae5f98ca0242ca8506f562f3d9836170f91"
+                    "url": "https://files.pythonhosted.org/packages/92/61/612f8269520da1cfecb6805afde9e4859e0f9d07bd349e4767c6f04394f0/injector-0.19.0-py2.py3-none-any.whl",
+                    "sha256": "2e5f5629d9c42f8ed8a3f8a5b4e9dc8ac80547cd95c7ce0bd0fc3f4baae6bc77"
                 }
             ]
         },
@@ -44,19 +44,9 @@
             "name": "python3-liquidctl",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"liquidctl==1.7.1\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"liquidctl==1.8.1\" --no-build-isolation"
             ],
             "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/99/9b/5c41756461308a5b2d8dcbcd6eaa2f1c1bc60f0a6aa743b58cab756a92e1/hidapi-0.10.1.tar.gz",
-                    "sha256": "a1170b18050bc57fae3840a51084e8252fd319c0fc6043d68c8501deb0e25846"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/93/4b0bb101e54206e92feb3c986c274902212b2ed8c55423e6e7f6d8b693ca/colorlog-6.4.1-py2.py3-none-any.whl",
-                    "sha256": "b13da382156711f7973bf7cbd1f40ea544aff51fde5dc3fb8f3fa602c321d645"
-                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz",
@@ -69,18 +59,23 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bd/25/5bdf7f1adeebd4e3fa76b2e2f045ae53ee208e40a4231ad0f0c3007e4353/setuptools-57.4.0-py3-none-any.whl",
-                    "sha256": "a49230977aa6cfb9d933614d2f7b79036e9945c4cdd7583163f4e920b83418d6"
+                    "url": "https://files.pythonhosted.org/packages/95/94/8c5a48699eaae4519e538f98ddae2d2c0810554c7b9efb2aac53817ef593/liquidctl-1.8.1.tar.gz",
+                    "sha256": "0859dfe673babe9af10e4f431e0baa974961f0b2c973a37e64eb6c6c2fddbe73"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cb/53/6edf9da254d2e80580b116c45a7c50edaf055917bf6d771185a5adf52d2a/liquidctl-1.7.1.tar.gz",
-                    "sha256": "10f650b9486ddac184330940550433685ae0abc70b66fe92d994042491aab356"
+                    "url": "https://files.pythonhosted.org/packages/7d/54/e24efe5469ecb2710112055de87a2900e9494810bcfc25c12c7a0723eb64/colorlog-6.6.0-py2.py3-none-any.whl",
+                    "sha256": "351c51e866c86c3217f08e4b067a7974a678be78f07f85fc2d55b8babde6d94e"
                 },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl",
                     "sha256": "2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/99/9b/5c41756461308a5b2d8dcbcd6eaa2f1c1bc60f0a6aa743b58cab756a92e1/hidapi-0.10.1.tar.gz",
+                    "sha256": "a1170b18050bc57fae3840a51084e8252fd319c0fc6043d68c8501deb0e25846"
                 }
             ]
         },
@@ -142,13 +137,13 @@
             "name": "python3-peewee",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"peewee==3.14.4\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"peewee==3.14.9\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c9/51/3b2ded25a1cd51d1096bda8e0d1474712fe71efd374ae39b86c73a83d648/peewee-3.14.4.tar.gz",
-                    "sha256": "9e356b327c2eaec6dd42ecea6f4ddded025793dba906a3d065a0452e726c51a2"
+                    "url": "https://files.pythonhosted.org/packages/84/37/001fa02f7dd2f7ff716820db307e3df4060fd184b0e235d37397a05020e2/peewee-3.14.9.tar.gz",
+                    "sha256": "69c1b88dc89b184231cc1ce6df241075aca5cec43e89749cc4a63108f9ceea47"
                 }
             ]
         },
@@ -156,7 +151,7 @@
             "name": "python3-PyGObject",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"PyGObject==3.40.1\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"PyGObject==3.40.1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -175,7 +170,7 @@
             "name": "python3-pyxdg",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyxdg==0.27\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyxdg==0.27\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -189,7 +184,7 @@
             "name": "python3-requests",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests==2.26.0\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests==2.26.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -223,7 +218,7 @@
             "name": "python3-Rx",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Rx==3.2.0\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Rx==3.2.0\" --no-build-isolation"
             ],
             "sources": [
                 {
